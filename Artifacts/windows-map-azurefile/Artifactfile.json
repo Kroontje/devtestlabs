@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
+  "title": "Map Azure File Share to Windows",
+  "description": "Maps a Azure File share as driveletter to Windows.",
+  "publisher": "Microsoft",
+  "tags": [
+    "Windows"
+  ],
+  "targetOsType": "Windows",
+  "parameters": {
+    "shareStorageAccount": {
+      "type": "string",
+      "displayName": "Storage Account",
+      "description": "The Storage Account where the Azure File share resides."
+    },
+    "shareSecretKey": {
+      "type": "securestring",
+      "displayName": "Storage Key",
+      "description": "The secret key of the Azure File share."
+    },
+  "runCommand": {
+    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact-main.ps1', ' -shareStorageAccount ', parameters('shareSecretKey'), ' -shareSecretKey ''', parameters('shareSecretKey') '''\"')]"
+  }
+  ]
+}
