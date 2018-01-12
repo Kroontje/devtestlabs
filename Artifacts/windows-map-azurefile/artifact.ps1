@@ -18,7 +18,7 @@ if ($PSVersionTable.PSVersion.Major -lt 3)
 
 else
 {
-    $acctKey = ConvertTo-SecureString -String $shareSecretKey -AsPlainText -Force
+    $acctKey = ConvertTo-SecureString $shareSecretKey -AsPlainText -Force
     $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\$shareStorageAccount", $acctKey
     New-PSDrive -Name X -PSProvider FileSystem -Root "\\$shareStorageAccount.file.core.windows.net\demoshare" -Credential $credential -Persist
 }
