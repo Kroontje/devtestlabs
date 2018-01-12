@@ -1,3 +1,0 @@
-# Artifacts
-
-Store the Artifacts
