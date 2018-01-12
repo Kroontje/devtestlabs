@@ -17,7 +17,8 @@
       "type": "securestring",
       "displayName": "Storage Key",
       "description": "The secret key of the Azure File share."
-    },
+    }
+  },
   "runCommand": {
     "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact-main.ps1', ' -shareStorageAccount ', parameters('shareSecretKey'), ' -shareSecretKey ''', parameters('shareSecretKey') '''\"')]"
   }
