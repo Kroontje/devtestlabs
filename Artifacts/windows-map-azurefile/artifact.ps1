@@ -20,5 +20,5 @@ else
 {
     $acctKey = ConvertTo-SecureString $shareSecretKey -AsPlainText -Force
     $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\$shareStorageAccount", $acctKey
-    New-PSDrive -Name X -PSProvider FileSystem -Root "\\$shareStorageAccount.file.core.windows.net\demoshare" -Credential $credential -Persist
+    New-PSDrive -Name V -PSProvider FileSystem -Root "\\$shareStorageAccount.file.core.windows.net\demoshare" -Credential $credential -Persist
 }
