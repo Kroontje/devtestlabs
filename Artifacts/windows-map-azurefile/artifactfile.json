@@ -20,6 +20,6 @@
     }
   },
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact-main.ps1', ' -shareStorageAccount ', parameters('shareStorageAccount'), ' -shareSecretKey ''', parameters('shareSecretKey'), '''\"')]"
+    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact-main.ps1', ' -shareStorageAccount ', parameters('shareStorageAccount'), ' -shareSecretKey ', parameters('shareSecretKey'), \")]"
   }
 }
