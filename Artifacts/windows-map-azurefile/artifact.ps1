@@ -5,7 +5,7 @@ param
     [string] $shareStorageAccount,
 
     [Parameter(Mandatory = $true)]
-    [securestring] $shareSecretKey
+    [string] $shareSecretKey
 )
 
 ##############################
